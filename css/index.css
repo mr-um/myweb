@@ -1,0 +1,365 @@
+:root{
+    --background-color: #333647;
+    --pink-color: #ff3467;
+    --white: #fff;
+    --secondery-color: #bbbbbb;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--background-color) !important;
+}
+
+span{
+    color: var(--pink-color);
+}
+
+.navbar-brand{
+    font-size: 30px !important;
+}
+
+.nav-link{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: var(--white) !important;
+}
+
+.nav-link:hover{
+    opacity: .7;
+}
+
+.nav-link::before{
+    content: '';
+    position: absolute;
+    background-color: var(--pink-color);
+    width: 0px;
+    height: 0px;
+    bottom: 27px;
+    transition: .5s;
+}
+
+@media (max-width: 900px) {
+    .nav-link::before{
+        display: none;
+    }
+}
+
+.nav-link:hover::before{
+    width: 40px;
+    height: 2px;
+}
+
+canvas.particles-js-canvas-el{
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1000;
+    margin: 0px;
+}
+
+.hero-section .row{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero-section .row h1,h2,h3,p{
+    color: white !important;
+}
+
+.hero-section .row h3{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.hero-section .row h3::before{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 13px;
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-left: 58px;
+}
+
+.hero-section .row h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.hero-section .row h2{
+    font-size: 22px;
+    font-weight: 100;
+    margin: 8px 0px;
+}
+
+
+.hero-section .row p{
+    font-size: 13px;
+    margin-top: 13px;
+    line-height: 21px;
+    caret-color: var(--secondery-color) !important;
+    opacity: .8;
+}
+
+.hero-section .row img{
+    width: 80%;
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+}
+
+.hero-section .row .btn{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white !important;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    width: 113px;
+    font-family: 'Poppins' sans-serif;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+.hero-section .row .btn:hover{
+    animation: swing;
+    animation-duration: .5s;
+    background-color: white;
+    color: black !important;
+    border: 3px solid white;
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    .hero-section .row h1{
+        font-size: 42px;
+    }
+
+    .hero-section .row h2{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 992px) and (min-width: 600px) {
+    .hero-section .row h1{
+        font-size: 35px;
+    }
+
+    .hero-section .row h2{
+        font-size: 15px;
+    }
+
+    .hero-section .row .btn{
+        font-size: 15px;
+        width: 90px;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 600px) and (min-width: 300px) {
+    .hero-section .row h1{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .navbar-brand{
+        font-size: 24px !important;
+    }
+
+    .hero-section .row h2{
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero-section .row p{
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .hero-section .row h3{
+        text-align: center;
+        margin-bottom: -4px;
+    }
+
+    .hero-section .row p{
+        text-align: center;
+    }
+
+    .hero-section .row h3:before{
+        display: none;
+    }
+
+    .hero-section .row .btn{
+        font-size: 13px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        margin: 2px auto;
+        text-align: center;
+    }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .about_me_right_section{
+        padding-top: 50px;
+    }
+}
+
+/* about section */
+.about-section{
+    background-color: #282a39 !important;
+    padding: 60px 0px;
+    margin: 0;
+}
+
+.about-section #heading{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: .5px;
+    line-height: 57px;
+}
+
+.lets_talk{
+    color: white !important;
+    font-weight: 400;
+    margin-top: 14px;
+    padding-bottom: 15px;
+}
+
+.info_gmail{
+    font-weight: 600;
+    font-size: 15px;
+    word-spacing: 6px;
+}
+
+.contact-info{
+    margin-top: 15px;
+}
+
+
+.contact-info h5{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    word-spacing: 6px;
+}
+
+.about-section .about_me_right_section #txt{
+    font-size: 15px;
+    margin-top: 13px;
+    line-height: 25px;
+    color: var(--secondery-color);
+    opacity: .7;
+}
+
+.about-section .about_me_right_section hr{
+    margin: 0px;
+    border: 0.5px solid var(--pink-color);
+    width: 6rem;
+}
+
+.about-section .about_me_right_section table td{
+    border: none;
+    color: white;
+    font-size: 13px;
+}
+
+.about-section .about_me_right_section button{
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    font-family: 'Poppins' sans-serif;
+    margin-top: 10px;
+    color: white;
+}
+
+.about-section .about_me_right_section button:hover{
+    animation: swing;
+    animation-duration: .7s;
+}
+
+/*skill section */
+.skill-section{
+    padding: 100px 0px;
+}
+
+.skill-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skill-section-left #heading{
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.skill-section hr{
+    border: .5px solid var(--pink-color);
+    width: 6rem;
+    margin: 12px 0px;
+}
+
+.skill-section p{
+    color: var(--secondery-color);
+    font-size: 13px;
+}
+
+.skill-section .social_media_icons .list-group-item{
+    border: none;
+    color: white;
+    border-left: 2px solid var(--pink-color);
+    border-radius: 0px;
+    margin: 5px 0px;
+    width: 200px;
+    background: #81818180;
+    font-size: 14px;
+}
+
+.skill-section .social_media_icons .list-group-item a{
+    transition: 0.5s;
+}
+
+.skill-section .social_media_icons .list-group-item:hover a{
+    margin-left: 10px;
+}
+
+.skill-section-right .my_skills{
+    margin: 25px 0px;
+}
+
+.skill-section-right .my_skills span{
+    color: white;
+    font-size: 14px;
+
+}
+
+.skill-section-right .my_skills .progress{
+    background: #81818180;
+    border-radius: 100px;
+    margin-top: 3px;
+    height: 10px;
+}
+
+.skill-section-right .my_skills .progress-bar{
+    background: var(--pink-color) !important;
+    color: transparent;
+}
